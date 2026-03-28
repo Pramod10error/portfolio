@@ -4,15 +4,15 @@ const Footer = () => {
   const socialLinks = [
   {
     icon: Github,
-    link: "https://github.com/yourusername",
+    link: "https://github.com/Pramod10error",
   },
   {
     icon: Linkedin,
-    link: "https://linkedin.com/in/yourusername",
+    link: "https://www.linkedin.com/in/pramod-pradhan-6b2a24367",
   },
   {
     icon: Mail,
-    link: "mailto:your@email.com",
+    link: "mailto:pramadapradhan8@gmail.com",
   },
 ];
 return (
