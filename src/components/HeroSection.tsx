@@ -90,7 +90,7 @@ const HeroSection = () => {
           >
             Get In Touch
           </button>?
-          <a href="/Pramod_Resume.pdf"
+          <a href="/resume.pdf"
              download="Pramod_Resume.pdf"
              className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-5 py-2 rounded-xl shadow-lg hover:scale-105 transition">
 
