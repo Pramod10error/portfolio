@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
 import { z } from "zod";
+import emailjs from '@emailjs/browser';
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -29,6 +30,22 @@ const ContactSection = () => {
     }
     setErrors({});
     setSent(true);
+    emailjs.send(
+      "service_zp8i8pc",
+      "template_aa5zwsi",
+      {
+        from_name: form.name,
+        from_email: form.email,
+        message: form.message,
+     },
+     "JHrembd3M1EB7z4Qj"
+    )
+    .then(() => {
+      console.log("Email sent ✅");
+   })
+   .catch((error) => {
+     console.log("Error ❌", error);
+   });
     setTimeout(() => {
       setSent(false);
       setForm({ name: "", email: "", message: "" });
